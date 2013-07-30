@@ -1,0 +1,56 @@
+@mixin underline()
+  border-bottom: thin $light solid
+
+.underline
+  @include underline()
+
+.detail
+  font-size: .7em
+  font-style: normal
+  padding-left: 1em
+
+.scroll-y
+  overflow-y: auto
+  
+.force-scroll-y
+  overflow-y: scroll
+
+.size_adjustable
+  display: none
+
+.block
+  display: block
+
+.hidden
+  display: none
+
+.nowhere
+  position: absolute
+  top: -1000px
+  left: -1000px
+
+.left
+  float: left
+
+.right
+  float: right
+
+.relative
+  position: relative
+
+.bottom
+  position: absolute
+  bottom: 0
+
+.clear
+  clear: both
+
+.np_top
+  padding-top: 0 !important
+
+.np_bottom
+  padding-bottom: 0 !important
+
+.np_vert
+  @extend .np_top
+  @extend .np_bottom

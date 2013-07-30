@@ -1,0 +1,53 @@
+@import "overlay"
+
+.list-view-options-source, .list-view-args-source
+  display: none
+
+.list-view-overlay
+  @include overlay(.4)
+
+  .list-view-container
+    position: absolute
+    height: $content-height * 0.9
+    width: $content-width * 0.8
+    top: $content-height * 0.025
+    left: $content-width * 0.075
+    z-index: 2147483646
+    background-color: $dark
+    @include border-radius(12px)
+    padding: 12px
+
+    .list-view-html-wrapper
+      height: $content-height * 0.9 - $menu-height * 2
+
+      .list-view-item
+        @include underline()
+        color: $text-light
+
+      &.list-view-no-header
+        height: $content-height * 0.9 - $menu-height
+
+    .list-view-close
+      background-color: $hl_color
+      color: white
+      height: $menu-height
+      line-height: $menu-height
+
+    .list-view-header
+      background-color: $hl_color
+      color: white
+      height: $menu-height
+      line-height: $menu-height
+      font-style: italic
+
+.activity-list-view
+  .list-view-html-wrapper
+    text-align: left
+
+.notification-list-view
+  .list-view-html-wrapper
+    font-size: 18px
+
+  .notification_wrapper
+    margin: $dummy_height*2 0
+    @extend .underline

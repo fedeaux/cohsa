@@ -1,0 +1,23 @@
+.slider
+  position: absolute
+  @include transition(all .3s ease)
+
+.hide_up
+  position: absolute
+  @include translate3d(0, -$common-fluid-height, 0)
+
+.hide_bottom
+  position: absolute
+  @include translate3d(0, $common-fluid-height, 0)
+
+.hide_left
+  position: absolute
+  @include translate3d(-$content-width, 0, 0)
+
+.hide_right
+  position: absolute
+  @include translate3d($content-width, 0, 0)
+
+.current_page
+  position: absolute
+  @include translate3d(0, 0, 0)

@@ -1,0 +1,122 @@
+@import "compass/typography/text/force-wrap"
+
+.nonblocking_message
+  .nonblocking_message_content
+    padding: 5% 0
+    border-top: 5px solid
+    border-bottom: 5px solid
+    background-color: #e7e5df
+    font-style: italic
+    font-size: $label-height*.75
+    height: $message-icon-size
+
+    .nonblocking_message_img
+      display: inline-block
+      width: $message-icon-size
+      padding: 0 $message-icon-size*.2
+      float: left
+
+      img
+        width: $message-icon-size
+        height: $message-icon-size
+
+    .nonblocking_message_text
+      display: inline-block
+      width: $content-width - $message-icon-size*3
+      float: left
+      text-align: left
+      height: $message-icon-size
+
+  &.error
+    .nonblocking_message_content
+      border-color: $red
+
+  &.warning
+    .nonblocking_message_content
+      border-color: $orange
+
+  &.notice
+    .nonblocking_message_content
+      color: $dark
+      border-color: $blue
+
+  &.success
+    .nonblocking_message_content
+      color: $dark
+      border-color: $green
+
+  &.loading
+    .nonblocking_message_content
+      color: $hl_color
+      border-color: $hl_color
+
+@mixin overlay($opacity)
+  position: fixed
+  top: 0
+  left: 0
+  height: $content-height
+  width: $content-width
+  background-color: rgba(0, 0, 0, $opacity)
+  z-index: 147483646
+  font-family: Helvetica
+  text-align: center
+  font-size: $h1-font_size
+
+#overlay
+  @include overlay(.4)
+
+  .overlay_message_content
+    +force-wrap
+    padding: 5% 0
+    border-top: 5px solid
+    border-bottom: 5px solid
+    background-color: #e7e5df
+    font-style: italic
+    font-size: $label-height*.75
+
+    .overlay_message_img
+      display: inline-block
+      width: $message-icon-size
+      padding: 0 $message-icon-size*.2
+      float: left
+
+      img
+        width: $message-icon-size
+        height: $message-icon-size
+
+    .overlay_message_text
+      display: inline-block
+      width: $content-width - $message-icon-size*1.4
+      float: left
+      text-align: left
+      height: $message-icon-size
+
+  &.error
+    .overlay_message_content
+      border-color: $red
+
+  &.warning
+    .overlay_message_content
+      border-color: $orange
+
+  &.notice
+    .overlay_message_content
+      color: $dark
+      border-color: $blue
+
+  &.success
+    .overlay_message_content
+      color: $dark
+      border-color: $green
+
+  &.loading
+    .overlay_message_content
+      color: $hl_color
+      border-color: $hl_color
+
+.overlay_datepicker_wrapper
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 147483645
+  background-color: rgba(0, 0, 0, .4)
