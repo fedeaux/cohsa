@@ -4,7 +4,121 @@
   this.Views = {
     hello_cohsa: function() {
       var _outstream;
-      _outstream = "                   <div id=\"CohsaWrapper\">                       <h1 > You are now using Cohsa!                       </h1 >                       <p > Hope you like it                       </p >                     </div>";
+      _outstream = "                   <div id=\"CohsaWrapper\">                       <h1 > A nice welcome message.                       </h1 >                     </div>";
+      return _outstream;
+    },
+    make_args: function(a) {
+      return escape(JSON.stringify(a));
+    },
+    parse_args: function(a) {
+      return JSON.parse(unescape(a));
+    },
+    set_args: function(a) {
+      return JSV.args = a;
+    },
+    set_parse_args: function(a) {
+      var _a;
+      _a = JSV.parse_args(a);
+      JSV.set_args(_a);
+      return _a;
+    },
+    wrap: function(map, template) {
+      var content, html, placeholder;
+      if (typeof map === 'string') {
+        map = {
+          __placeholder__: map
+        };
+      }
+      html = template;
+      for (placeholder in map) {
+        content = map[placeholder];
+        html = html.replace(placeholder, content);
+      }
+      return html;
+    },
+    empty: function() {}
+  };
+
+  this.Views = {
+    hello_cohsa: function() {
+      var _outstream;
+      _outstream = "                   <div id=\"CohsaWrapper\">                       <h1 > A nice welcome message, as promissed.                       </h1 >                     </div>";
+      return _outstream;
+    },
+    make_args: function(a) {
+      return escape(JSON.stringify(a));
+    },
+    parse_args: function(a) {
+      return JSON.parse(unescape(a));
+    },
+    set_args: function(a) {
+      return JSV.args = a;
+    },
+    set_parse_args: function(a) {
+      var _a;
+      _a = JSV.parse_args(a);
+      JSV.set_args(_a);
+      return _a;
+    },
+    wrap: function(map, template) {
+      var content, html, placeholder;
+      if (typeof map === 'string') {
+        map = {
+          __placeholder__: map
+        };
+      }
+      html = template;
+      for (placeholder in map) {
+        content = map[placeholder];
+        html = html.replace(placeholder, content);
+      }
+      return html;
+    },
+    empty: function() {}
+  };
+
+  this.Views = {
+    hello_cohsa: function() {
+      var _outstream;
+      _outstream = "                   <div id=\"CohsaWrapper\">                       <h1 > A nice welcome message, as promissed.                       </h1 >                       <p > Did you expect more?                       </p >                     </div>";
+      return _outstream;
+    },
+    make_args: function(a) {
+      return escape(JSON.stringify(a));
+    },
+    parse_args: function(a) {
+      return JSON.parse(unescape(a));
+    },
+    set_args: function(a) {
+      return JSV.args = a;
+    },
+    set_parse_args: function(a) {
+      var _a;
+      _a = JSV.parse_args(a);
+      JSV.set_args(_a);
+      return _a;
+    },
+    wrap: function(map, template) {
+      var content, html, placeholder;
+      if (typeof map === 'string') {
+        map = {
+          __placeholder__: map
+        };
+      }
+      html = template;
+      for (placeholder in map) {
+        content = map[placeholder];
+        html = html.replace(placeholder, content);
+      }
+      return html;
+    },
+    empty: function() {}
+  };
+
+  this.Views = {
+    hello_cohsa: function() {
+      var _outstream;
+      _outstream = "                   <div id=\"CohsaWrapper\">                       <h1 > A nice welcome message, as promissed.                       </h1 >                     </div>";
       return _outstream;
     },
     make_args: function(a) {
